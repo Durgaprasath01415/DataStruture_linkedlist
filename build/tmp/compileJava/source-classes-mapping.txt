@@ -1,2 +1,6 @@
+INode.java
+ INode
 MyNode.java
  MyNode
+LinkedList.java
+ LinkedList

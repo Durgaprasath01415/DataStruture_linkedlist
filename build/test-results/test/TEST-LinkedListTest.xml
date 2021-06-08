@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LinkedListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-08T18:15:06" hostname="DESKTOP-BS45UV7" time="0.014">
+  <properties/>
+  <testcase name="givenThreeNumber_whenAddedToLinkedListShouldNeAddedToTheTop" classname="LinkedListTest" time="0.014"/>
+  <system-out><![CDATA[70->30->56]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
