@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="LinkedListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-09T01:27:56" hostname="DESKTOP-BS45UV7" time="0.016">
+<testsuite name="LinkedListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-09T01:33:45" hostname="DESKTOP-BS45UV7" time="0.015">
   <properties/>
-  <testcase name="givenFirstElement_WhenDeleted_ShouldPassLinkedListResult" classname="LinkedListTest" time="0.016"/>
-  <system-out><![CDATA[30->70]]></system-out>
+  <testcase name="givenLastElement_WhenDeleted_ShouldPassLinkedListTest" classname="LinkedListTest" time="0.015"/>
+  <system-out><![CDATA[56->30]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
