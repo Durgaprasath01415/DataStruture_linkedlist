@@ -34,6 +34,13 @@ public class LinkedList<E> {
         newNode.setNext((tempNode));
     }
 
+    public E pop() {
+        INode<E> tempNode = head.getNext();
+        E key = head.getKey();
+        head = tempNode;
+        return key;
+    }
+
     public void printNodes() {
         INode<E> tempNode = head;
         while(tempNode.getNext() != null) {
