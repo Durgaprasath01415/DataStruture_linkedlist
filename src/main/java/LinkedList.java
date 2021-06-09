@@ -28,6 +28,12 @@ public class LinkedList<E> {
         this.tail = myNode;
     }
 
+    public void insert(INode<E> myNode, INode<E> newNode) {
+        INode<E> tempNode = myNode.getNext();
+        myNode.setNext(newNode);
+        newNode.setNext((tempNode));
+    }
+
     public void printNodes() {
         INode<E> tempNode = head;
         while(tempNode.getNext() != null) {
@@ -35,19 +41,5 @@ public class LinkedList<E> {
             tempNode = tempNode.getNext();
         }
         System.out.print(tempNode.getKey());
-    }
-
-    public static void main(String[] args) {
-
-        LinkedList<Integer> list = new LinkedList<>();
-
-        MyNode<Integer> firstNode = new MyNode<>(56);
-        MyNode<Integer> secondNode = new MyNode<>(30);
-        MyNode<Integer> thirdNode = new MyNode<>(70);
-
-        list.add(thirdNode);
-        list.add(secondNode);
-        list.add(firstNode);
-        list.printNodes();
     }
 }
