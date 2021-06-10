@@ -56,6 +56,31 @@ public class LinkedList<E> {
         return key;
     }
 
+    public void searchByKey(int data) {
+        boolean flag = false;
+        int index = 1;
+        INode<E> temp = head;
+
+        if(head == null) {
+            System.out.println("List is empty");
+        }
+
+        else {
+            while(temp != null) {
+                if(temp.getKey().equals(data)) {
+                    flag=true;
+                    break;
+                }
+                index++;
+                temp = temp.getNext();
+            }
+        }
+        if(flag)
+            System.out.println("Element present at the position:"+index);
+        else
+            System.out.println("Element not present");
+    }
+
     public void printNodes() {
         INode<E> tempNode = head;
         while(tempNode.getNext() != null) {
