@@ -102,7 +102,7 @@ public class LinkedListTest {
     }
 
     @Test
-    public void givenSearchByKey_WhenDeleted_ShouldPassLinkedListTest() {
+    public void givenSearchByKey_WhenMatched_ShouldPassLinkedListTest() {
         MyNode<Integer> myFirstNode = new MyNode<>(56);
         MyNode<Integer> mySecondNode = new MyNode<>(30);
         MyNode<Integer> myThirdNode = new MyNode<>(70);
@@ -112,7 +112,7 @@ public class LinkedListTest {
         myLinkedList.add(myFirstNode);
         myLinkedList.append(myThirdNode);
         myLinkedList.insert(myFirstNode, mySecondNode);
-        myLinkedList.searchByKey(30);
+        myLinkedList.searchByKey(mySecondNode);
 
         myLinkedList.printNodes();
 

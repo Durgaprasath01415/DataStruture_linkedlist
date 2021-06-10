@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="LinkedListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-10T02:07:17" hostname="DESKTOP-BS45UV7" time="0.035">
+<testsuite name="LinkedListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-10T08:34:17" hostname="DESKTOP-BS45UV7" time="0.036">
   <properties/>
-  <testcase name="givenSearchByKey_WhenDeleted_ShouldPassLinkedListTest" classname="LinkedListTest" time="0.035"/>
-  <system-out><![CDATA[Element present at the position:3
-56->30->70]]></system-out>
+  <testcase name="givenSearchByKey_WhenDeleted_ShouldPassLinkedListTest" classname="LinkedListTest" time="0.036"/>
+  <system-out><![CDATA[56->30->70]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
