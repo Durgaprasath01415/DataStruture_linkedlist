@@ -81,4 +81,23 @@ public class LinkedList<T> {
         }
         return size;
     }
+
+    public void sortedLinkedList(INode<Integer> newNode) {
+        INode<T> tempNode = head;
+        INode<T> prevNode = null;
+        while (tempNode != null && (newNode.getData()).compareTo((Integer) tempNode.getData()) > 0) {
+            prevNode = tempNode;
+            tempNode = tempNode.getNext();
+        }
+        if (prevNode == null) {
+            this.head = (INode<T>) newNode;
+        } else {
+            prevNode.setNext(newNode);
+        }
+        newNode.setNext(tempNode);
+        while (tempNode != null) {
+            this.tail = tempNode;
+            tempNode = tempNode.getNext();
+        }
+    }
 }
