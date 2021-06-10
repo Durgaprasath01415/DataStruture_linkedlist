@@ -1,26 +1,33 @@
 public class MyNode<E> implements INode<E> {
+    private E data;
+    private INode next;
 
-    public E key;
-    public MyNode<E> next;
-
-    public MyNode(E key) {
-        this.key = key;
-        this.next = null;
+    MyNode() {
     }
 
-    public E getKey() {
-        return key;
+    // Constructor with node fields
+    public MyNode(E data) {
+        this.setData(data);
+        this.setNext(null);
+    }
+    @Override
+    public  E getData() {
+        return data;
+    }
+    @Override
+    public void setData(E data) {
+        this.data = data;
     }
 
-    public void setKey(E key) {
-        this.key = key;
-    }
-
-    public INode<E> getNext() {
+    public INode getNext() {
         return next;
     }
 
-    public void setNext(INode<E> next) {
-        this.next = (MyNode<E>) next;
+    public void setNext(INode next) {
+        this.next = next;
+    }
+
+    public void printWelcomeMessage() {
+        System.out.println("Welcome to the Data Structure Problem");
     }
 }

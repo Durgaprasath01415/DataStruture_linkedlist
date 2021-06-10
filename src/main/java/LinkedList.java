@@ -1,84 +1,66 @@
-public class LinkedList<E> {
+public class LinkedList<T> {
+    public INode<T> head;
+    public INode<T> tail;
 
-    public INode<E> head;
-    public INode<E> tail;
     public LinkedList() {
         this.head = null;
         this.tail = null;
     }
 
-    public void add(INode<E> node) {
+    public void add(INode<T> newNode) {
+        if (this.tail == null) {
+            this.tail = newNode;
+        }
         if (head == null) {
-            head = node;
-            tail = node;
+            head = newNode;
         } else {
-            INode<E> tempNode = head;
-            head = node;
-            head.setNext(tempNode);
+            INode<T> tempNode = this.head;
+            this.head = newNode;
+            this.head.setNext(tempNode);
         }
     }
 
-    public void append(INode<E> myNode) {
+    public void addLast(INode<T> newNode) {
         if (this.head == null) {
-            this.head = myNode;
+            this.head = newNode;
         }
-        if (this.tail != null) {
-            this.tail.setNext(myNode);
+        if (tail == null) {
+            tail = newNode;
+        } else {
+            this.tail.setNext(newNode);
+            tail = newNode;
         }
-        this.tail = myNode;
     }
 
-    public void insert(INode<E> myNode, INode<E> newNode) {
-        INode<E> tempNode = myNode.getNext();
-        myNode.setNext(newNode);
-        newNode.setNext((tempNode));
+    public void insertNode(INode<Integer> myFirstNode, INode<Integer> mySecondNode) {
+        mySecondNode.setNext(myFirstNode.getNext());
+        myFirstNode.setNext(mySecondNode);
     }
 
-    public E pop() {
-        INode<E> tempNode = head.getNext();
-        E key = head.getKey();
-        head = tempNode;
-        return key;
+    public INode<T> popFirst() {
+        INode<T> tempNode = this.head;
+        this.head = this.head.getNext();
+        return tempNode;
     }
 
-    public E popLast() {
-        INode<E> currentNode = head;
-        INode<E> previousNode = null;
-        while(currentNode.getNext() != null) {
-            previousNode = currentNode;
-            currentNode = currentNode.getNext();
-        }
-        E key = currentNode.getKey();
-        currentNode = null;
-        assert previousNode != null;
-        previousNode.setNext(null);
-        tail = previousNode;
-        return key;
-    }
-
-    public boolean searchByKey(MyNode<Integer> item) {
-        boolean isPresent = false;
-        INode<E> tempNode = head;
-        while(tempNode.getNext() != null) {
-            if(tempNode.getKey().equals(item)) {
-                isPresent = true;
-            }
-            else {
-                tempNode = tempNode.getNext();
-            }
-        }
-        if(tail.getKey().equals(item)) {
-            isPresent = true;
-        }
-        return isPresent;
-    }
-
-    public void printNodes() {
-        INode<E> tempNode = head;
-        while(tempNode.getNext() != null) {
-            System.out.print(tempNode.getKey() + "->");
+    public INode<T> popLast() {
+        INode<T> tempNode = head;
+        while (!(tempNode.getNext().equals(tail))) {
             tempNode = tempNode.getNext();
         }
-        System.out.print(tempNode.getKey());
+        this.tail = tempNode;
+        tempNode = tempNode.getNext();
+        return tempNode;
+    }
+
+    public INode searchNode(T key) {
+        INode tempNode = this.head;
+        while (tempNode != null) {
+            if (tempNode.getData() == key) {
+                return tempNode;
+            }
+            tempNode = tempNode.getNext();
+        }
+        return null;
     }
 }
