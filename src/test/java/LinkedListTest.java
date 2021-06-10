@@ -101,4 +101,20 @@ public class LinkedListTest {
                 && myLinkedList.tail.equals(myFirstNode));
         Assert.assertEquals(true, result);
     }
+
+    @Test
+    public void DeleteANodeFromLinkedList_IfDeleted_ShouldReturnSizeAndReturnTrue() {
+        MyNode<Integer> myFirstNode = new MyNode<>(70);
+        MyNode<Integer> mySecondNode = new MyNode<>(40);
+        MyNode<Integer> myThirdNode = new MyNode<>(30);
+        MyNode<Integer> myFourthNode = new MyNode<>(56);
+        LinkedList<Integer> myLinkedList = new LinkedList<Integer>();
+        myLinkedList.add(myFirstNode);
+        myLinkedList.add(mySecondNode);
+        myLinkedList.add(myThirdNode);
+        myLinkedList.add(myFourthNode);
+        myLinkedList.popNode(40);
+        int size = myLinkedList.getSize();
+        Assert.assertEquals(3, size);
+    }
 }

@@ -63,4 +63,22 @@ public class LinkedList<T> {
         }
         return null;
     }
+
+    public void popNode(T key) {
+        INode tempNode = head;
+        while (tempNode.getNext().getData() != key) {
+            tempNode = tempNode.getNext();
+        }
+        tempNode.setNext(tempNode.getNext().getNext());
+    }
+
+    public int getSize() {
+        int size = 0;
+        INode tempNode = head;
+        while (tempNode != null) {
+            size++;
+            tempNode = tempNode.getNext();
+        }
+        return size;
+    }
 }

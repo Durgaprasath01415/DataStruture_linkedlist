@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<testsuite name="LinkedListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-10T08:22:49" hostname="DESKTOP-BS45UV7" time="0.013">
+<testsuite name="LinkedListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-10T09:16:34" hostname="DESKTOP-BS45UV7" time="0.006">
   <properties/>
-  <testcase name="givenDeleteByKey_ThenInsertValueBetween_ShouldPassLinkedListTest" classname="LinkedListTest" time="0.013"/>
-  <system-out><![CDATA[56->40->70]]></system-out>
-=======
-<testsuite name="LinkedListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-10T08:34:17" hostname="DESKTOP-BS45UV7" time="0.036">
-  <properties/>
-  <testcase name="givenSearchByKey_WhenDeleted_ShouldPassLinkedListTest" classname="LinkedListTest" time="0.036"/>
-  <system-out><![CDATA[56->30->70]]></system-out>
->>>>>>> UC7_SearchByKeylinkedList
-=======
-<testsuite name="LinkedListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-10T09:03:35" hostname="DESKTOP-BS45UV7" time="0.006">
-  <properties/>
-  <testcase name="SearchDataNode_ForGivenDataIfFound_ShouldInsertGivenNodeAndReturnTrue" classname="LinkedListTest" time="0.006"/>
+  <testcase name="DeleteANodeFromLinkedList_IfDeleted_ShouldReturnSizeAndReturnTrue" classname="LinkedListTest" time="0.006"/>
   <system-out><![CDATA[]]></system-out>
->>>>>>> UC8_SearchByKeyThenInsertValue
   <system-err><![CDATA[]]></system-err>
 </testsuite>
