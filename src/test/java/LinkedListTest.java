@@ -119,7 +119,7 @@ public class LinkedListTest {
     }
 
     @Test
-    public void IfLInkedListIsInAscendingOrderReturnTrue() {
+    public void IfLInkedList_IsInAscendingOrderReturnTrue() {
         MyNode<Integer> myFirstNode = new MyNode<>(56);
         MyNode<Integer> mySecondNode = new MyNode<>(30);
         MyNode<Integer> myThirdNode = new MyNode<>(70);
