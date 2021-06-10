@@ -102,7 +102,7 @@ public class LinkedListTest {
     }
 
     @Test
-    public void givenSearchByKey_ShouldPassLinkedListTest() {
+    public void givenSearchByKey_WhenMatched_ShouldPassLinkedListTest() {
         MyNode<Integer> myFirstNode = new MyNode<>(56);
         MyNode<Integer> mySecondNode = new MyNode<>(30);
         MyNode<Integer> myThirdNode = new MyNode<>(70);
@@ -112,24 +112,7 @@ public class LinkedListTest {
         myLinkedList.add(myFirstNode);
         myLinkedList.append(myThirdNode);
         myLinkedList.insert(myFirstNode, mySecondNode);
-        myLinkedList.searchByKey(30);
-
-        myLinkedList.printNodes();
-    }
-
-    @Test
-    public void givenSearchByKey_ThenInsertValueBetween_ShouldPassLinkedListTest() {
-        MyNode<Integer> myFirstNode = new MyNode<>(56);
-        MyNode<Integer> mySecondNode = new MyNode<>(30);
-        MyNode<Integer> myThirdNode = new MyNode<>(70);
-        MyNode<Integer> myForthNode = new MyNode<>(40);
-
-        LinkedList<Integer> myLinkedList = new LinkedList<>();
-
-        myLinkedList.add(myFirstNode);
-        myLinkedList.append(myThirdNode);
-        myLinkedList.insert(myFirstNode, mySecondNode);
-        myLinkedList.insertAfter(mySecondNode,myForthNode);
+        myLinkedList.searchByKey(mySecondNode);
 
         myLinkedList.printNodes();
     }
