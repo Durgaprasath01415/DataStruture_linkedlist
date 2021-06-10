@@ -81,6 +81,15 @@ public class LinkedList<E> {
             System.out.println("Element not present");
     }
 
+    public void insertAfter(INode previousNode, INode data) {
+        if (previousNode == null) {
+            System.out.println("Previous node is null");
+        }
+        INode newNode = data;
+        newNode.setNext(previousNode.getNext());
+        previousNode.setNext(newNode);
+    }
+
     public void printNodes() {
         INode<E> tempNode = head;
         while(tempNode.getNext() != null) {
